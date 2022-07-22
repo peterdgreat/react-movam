@@ -33,8 +33,14 @@ export default function Login() {
     <LoginContainer>
       <div className="row">
         <div className="d-none d-lg-flex col-7 flex-column justify-content-center">
-          <h1 className="text-white">Movam</h1>
-          <h3 className="welcome-note">Welcome to Movam</h3>
+          <h1 class="text-white">Movam</h1>
+          <h3 class="welcome-note">Welcome Back !</h3>
+          <p class="text-white w-50">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi
+            consectetur nisi, eu consectetur nisi nisi eu consectetur
+            consectetur.
+          </p>
         </div>
         <div className="col-12 col-lg-5 d-flex flex-column">
           <FormContainer>

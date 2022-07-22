@@ -3,7 +3,7 @@ import styled from "styled-components";
 const InputContainer = styled.div``;
 
 const FormContainer = styled.div`
-  padding: 20px;
+  padding: 30px 20px 100px 20px;
   background-color: #fff;
   border-radius: 20px;
   display: flex;

@@ -1,6 +1,5 @@
 ## Login Data
-The User Data is passed to the user details page.
-
+This is a simple demo of how to pass data from one page to another.
 ## Live demo
 [Login-data](https://login-detail-react.netlify.app/)
 

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 export default function User() {
-  const [user, setUser] = React.useState({});
+  const [user, setUser] = useState({});
   const location = useLocation();
 
-  React.useEffect(() => {
+  useEffect(() => {
     setUser(location?.state?.user);
   }, []);
   return (

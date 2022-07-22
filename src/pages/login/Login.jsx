@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
-import { useNavigate } from 'react-router';
+import { useNavigate } from "react-router";
 import {
   FormContainer,
   InputContainer,
@@ -27,7 +27,7 @@ const CustomInputField = ({ field, form, ...props }) => {
 };
 
 export default function Login() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <LoginContainer>
@@ -59,12 +59,11 @@ export default function Login() {
               })}
               onSubmit={(values, { setSubmitting }) => {
                 setTimeout(() => {
-                    navigate('/user', {
-                        state: {
-                            user: values
-                        }
-                    });
-                  console.log(JSON.stringify(values, null, 2));
+                  navigate("/user", {
+                    state: {
+                      user: values,
+                    },
+                  });
                   setSubmitting(false);
                 }, 400);
               }}

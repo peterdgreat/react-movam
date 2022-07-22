@@ -6,7 +6,7 @@ export default function User() {
 
   useEffect(() => {
     setUser(location?.state?.user);
-  }, []);
+  }, [ location ]);
   return (
     <div className="d-flex text-white flex-column justify-content-center align-items-center">
       <h1>User Information</h1>

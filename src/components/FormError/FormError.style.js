@@ -1,4 +1,3 @@
-import { colors, getTypographyFontStyle } from "../../styles/global.style";
 
 import styled from "styled-components";
 

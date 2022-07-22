@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from 'react-router';
 import {
   FormContainer,
   InputContainer,
@@ -12,6 +13,7 @@ const CustomInputField = ({ field, form, ...props }) => {
   const fieldName = field.name;
   const errorMessage = form.errors[fieldName];
   const isTouched = form.touched[fieldName];
+
   return (
     <InputContainer>
       <InputField
@@ -25,12 +27,14 @@ const CustomInputField = ({ field, form, ...props }) => {
 };
 
 export default function Login() {
+    const navigate = useNavigate();
+
   return (
     <LoginContainer>
       <div className="row">
-        <div class="d-none d-lg-flex col-7 flex-column justify-content-center">
-          <h1 class="text-white">Movam</h1>
-          <h3 class="welcome-note">Welcome to Movam</h3>
+        <div className="d-none d-lg-flex col-7 flex-column justify-content-center">
+          <h1 className="text-white">Movam</h1>
+          <h3 className="welcome-note">Welcome to Movam</h3>
         </div>
         <div className="col-12 col-lg-5 d-flex flex-column">
           <FormContainer>
@@ -55,6 +59,11 @@ export default function Login() {
               })}
               onSubmit={(values, { setSubmitting }) => {
                 setTimeout(() => {
+                    navigate('/user', {
+                        state: {
+                            user: values
+                        }
+                    });
                   console.log(JSON.stringify(values, null, 2));
                   setSubmitting(false);
                 }, 400);

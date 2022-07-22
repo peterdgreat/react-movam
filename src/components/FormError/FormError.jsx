@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormFieldError, FormFieldErrorIcon, FormFieldErrorMessage } from './FormError.style';
+import { FormFieldError, FormFieldErrorMessage } from './FormError.style';
 
 const FormError = ({ message}) => {
   return (
